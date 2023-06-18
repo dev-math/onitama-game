@@ -2,6 +2,9 @@
  * Classe usada para definição de estrutura de posições e movimentos do jogo
  */
 public class Position {
+  private int row;
+  private int col;
+
   /**
    * Construtor que define o valor da Linha e da Coluna da posição, baseado no
    * plano cartesiano
@@ -10,7 +13,8 @@ public class Position {
    * @param col Coluna
    */
   public Position(int row, int col) {
-
+    this.row = row;
+    this.col = col;
   }
 
   /**
@@ -19,7 +23,7 @@ public class Position {
    * @return Um valor int representando o eixo X
    */
   public int getRow() {
-    return 0;
+    return row;
   }
 
   /**
@@ -28,6 +32,34 @@ public class Position {
    * @return Um valor int representando o eixo Y
    */
   public int getCol() {
-    return 0;
+    return col;
+  }
+
+  /**
+   * Compara se esta posição é igual a outra posição fornecida.
+   *
+   * @param obj O objeto a ser comparado
+   * @return true se as posições forem iguais, false caso contrário
+   */
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (obj == null || getClass() != obj.getClass()) {
+      return false;
+    }
+    Position other = (Position) obj;
+    return row == other.row && col == other.col;
+  }
+
+  /**
+   * Retorna uma representação em formato de string da posição.
+   *
+   * @return A posição no formato "(row, col)"
+   */
+  @Override
+  public String toString() {
+    return "(" + row + ", " + col + ")";
   }
 }
