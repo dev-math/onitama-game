@@ -7,8 +7,8 @@ public class GameImpl implements Game {
   private Player currentPlayer;
   private Player winner;
   private Card[] deck;
-  private final int BLUE_TEMPLE = 0;
-  private final int RED_TEMPLE = 4;
+  private final static int BLUE_TEMPLE = 0;
+  private final static int RED_TEMPLE = 4;
 
   /**
    * Construtor que recebe nenhum parâmetro.
