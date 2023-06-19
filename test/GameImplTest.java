@@ -201,7 +201,7 @@ public class GameImplTest {
     };
     game = new GameImpl("Player 1", "Player 2", customDeck);
 
-    // move o mestre do player2 (vermelho) uma casa para cima
+    // move o mestre do player2 (player vermelho) uma casa para cima
     Card card = game.getCurrentPlayer().getCards()[0];
     Position currentPos = new Position(4, 2);
     Piece piece = game.getPiece(currentPos);
